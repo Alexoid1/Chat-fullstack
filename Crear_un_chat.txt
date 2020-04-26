@@ -1,0 +1,40 @@
+chat node.js express
+-------------------------------
+1  bajar dependencia
+2 crear un servidor con express
+3 asignar carpeta de inicio
+4 crear archivo html
+5 agregar cdn de fgramework utilizados (boostrap,jquery)
+6 crear archivo main.js y vincularlo en el index.htm
+7 creo otro servidor con el modulo http de node
+8 conexion de sockets a tiempo real
+9 usamos el metodo io.on para sercioranos de q los sockets estan activos
+10 lo vinculamos a sockets.io a el archivo index.html
+11) se crea archivo sockets y se lo exporta hacia el index.js y se lo requiere en index con un parametro io
+12)configuramos el puerto usa el puerto si lo hay sino usa el puerto dado
+13) atravez de jquery obtenemos los id q vamos a usar el submit input y chat
+14)capturamos el evento submit
+15 emitimos un evento llamado send message q y enviamos el valor del input
+16 en el archivo sockets.js resivimos el evbento send message
+17 retrasmite el evento resivido a todos los sockets disponibles y con el nombre del evemnto new message
+18)resive los datos del evento new message originado en el servidor y los muestra en pantalla
+19 creamos en el index.html el container del login yagregamos al chat la lista de usarios
+20)obteniendo los elemnetos del dom del login
+21 emite un evento new user que es el imput q viene del formulario del login
+22 resive el evento new user en el sockets si esta conecta el usuaripo o no si no lo esta emite el evento username
+23) un condicional en el q al ingresar un nuevo nombre quita la interfaz del login y pone el chat
+24 para todos los nombres en nicknames se les asigan en un parrafo y con un incono
+25)evento disconnect se ejecuta cuando un usuario se desconecta 
+26 si registra una propiedad nickname q se le da al conectarse al socket  y se desconecta se lo quita del arreglo    
+27) se cambia la funcion por un objeto para poder usar el nombre de quien escribio el mensaje 
+28) se analiza la cadena si tiene el cartacter /w y un nombre de usuario valido envia un mensaje privado 
+29 si cumple lo anterior emite evento whisper 
+30 crea un callback para avisar de posibles errores como un usuario no valido 
+31)hace q el cliente escuche el evento whisper y agrega el mensaje al chat
+32 instalar el paquete moongose y inicializar el servidor de mondb con mongod
+33) creamos carpeta model y archivo chat.js q contiene el esquema de la base de datos
+34) creamos y nos conectamos a la base de datos
+35 cuando escriba un mensaje le asigan los valores a un objeto con el esquema creado  y lo guarda 
+36) buscar los ultimos 8 mensajes guardados en la base de datos y guardarlos en variable messages
+37 emitir evento  load old mesagges y como dato  la variable messages con los mensajes guardados el la base datos
+38 resivir el evento load old messages y escribir mensajes el el chat
