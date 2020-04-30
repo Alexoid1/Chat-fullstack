@@ -1,3 +1,5 @@
 # Chat-fullstack
 Chat with mongo, node, express
-https://chat-javas.herokuapp.com/
+## 1 intall mongo
+## 2 mongod
+## 3 npm run dev
